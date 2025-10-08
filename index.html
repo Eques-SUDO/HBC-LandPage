@@ -163,79 +163,93 @@
         .form-section {
             width: 100%;
             background-color: white;
-            padding: 20px 20px 40px 20px;
+            padding: 20px 20px 10px 20px;
             text-align: center;
         }
 
         .form-section img {
             width: 100%;
             display: block;
-            margin: 0 auto 30px;
+            margin: 0 auto 0px;
         }
 
         .contact-form {
-            max-width: 400px;
+            max-width: 500px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 30px;
+            background: linear-gradient(to bottom, #f8fdfe 0%, #ffffff 100%);
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(59, 169, 187, 0.15);
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             text-align: left;
         }
 
         .form-group label {
             display: block;
-            font-size: 16px;
+            font-size: 17px;
             font-weight: bold;
-            margin-bottom: 8px;
-            color: #000;
+            margin-bottom: 10px;
+            color: #2d3748;
+            letter-spacing: 0.3px;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 12px 15px;
+            padding: 15px 18px;
             font-size: 16px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
             font-family: Arial, sans-serif;
-            transition: border-color 0.3s ease;
+            transition: all 0.3s ease;
+            background-color: #fff;
         }
 
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
             border-color: #3ba9bb;
+            box-shadow: 0 0 0 3px rgba(59, 169, 187, 0.1);
+            transform: translateY(-1px);
         }
 
         .form-group textarea {
             resize: vertical;
-            min-height: 100px;
+            min-height: 120px;
         }
 
         .submit-button {
-            background-color: #3ba9bb;
+            background: linear-gradient(135deg, #3ba9bb 0%, #2d8a99 100%);
             color: white;
-            font-size: 18px;
+            font-size: 19px;
             font-weight: bold;
-            padding: 15px 40px;
+            padding: 18px 50px;
             border: none;
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 20px rgba(59, 169, 187, 0.3);
+            width: 100%;
+            letter-spacing: 0.5px;
         }
 
         .submit-button:hover {
-            background-color: #2d8a99;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(135deg, #2d8a99 0%, #1f6b77 100%);
+            box-shadow: 0 8px 25px rgba(59, 169, 187, 0.4);
             transform: translateY(-2px);
         }
 
+        .submit-button:active {
+            transform: translateY(0px);
+        }
+
         .submit-button:disabled {
-            background-color: #ccc;
+            background: linear-gradient(135deg, #cbd5e0 0%, #a0aec0 100%);
             cursor: not-allowed;
+            box-shadow: none;
         }
 
         .form-message {
@@ -354,14 +368,14 @@
         .map-section {
             width: 100%;
             background-color: white;
-            padding: 40px 20px;
+            padding: 20px 20px 40px 20px;
             text-align: center;
         }
 
         .map-container {
             width: 100%;
             max-width: 100%;
-            height: 450px;
+            height: 550px;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -376,8 +390,50 @@
 
         @media (max-width: 768px) {
             .map-container {
-                height: 350px;
+                height: 450px;
             }
+        }
+
+        /* CTA button between map and engagement */
+        .cta-button-section {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: white;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #3ba9bb 0%, #2d8a99 100%);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 20px 60px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(59, 169, 187, 0.4);
+            text-decoration: none;
+            display: inline-block;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(135deg, #2d8a99 0%, #1f6b77 100%);
+            box-shadow: 0 8px 25px rgba(59, 169, 187, 0.6);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .cta-button {
+                font-size: 18px;
+                padding: 18px 50px;
+            }
+        }
+
+        /* Engagement image spacing adjustment */
+        .engagement-image {
+            margin-top: -40px;
+            margin-bottom: -40px;
         }
     </style>
 </head>
@@ -399,7 +455,9 @@
         <img src="etapes.png" alt="Les étapes du Spanish Glow" class="section-image">
 
         <!-- Wavey decoration -->
-        <img src="formmm.png" alt="Decoration" class="section-image">
+        <a href="#form">
+            <img src="new form.png" alt="Decoration" class="section-image">
+        </a>
 
         <!-- Form Section -->
         <div id="form" class="form-section">
@@ -458,7 +516,7 @@
                 });
             </script>
 
-            <img src="localisation.png" alt="Localisation">
+            <img src="localisation new 3.png" alt="Localisation">
         </div>
 
         <!-- Map Section -->
@@ -469,7 +527,7 @@
         </div>
 
         <!-- Engagement Section -->
-        <img src="engagement.png" alt="Notre engagement" class="section-image">
+        <img src="engagement update.png" alt="Notre engagement" class="section-image">
 
         <!-- FAQ Section -->
         <img src="faq update.png" alt="Questions fréquentes" class="section-image">
