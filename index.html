@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanish Glow - HBC Medical Group</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #e8f4f8 0%, #ffffff 50%, #e8f4f8 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 480px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            background: white;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Wave borders on sides */
+        .container::before,
+        .container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 40px;
+            background-image: url('wavey.png');
+            background-repeat: repeat-y;
+            background-size: contain;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .container::before {
+            left: -40px;
+            transform: scaleX(-1);
+        }
+
+        .container::after {
+            right: -40px;
+        }
+
+        .hero-section {
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-image {
+            width: 100%;
+            display: block;
+        }
+
+        .button-section {
+            position: relative;
+            width: 100%;
+        }
+
+        .button-section img {
+            width: 100%;
+            display: block;
+        }
+
+        .section-image {
+            width: 100%;
+            display: block;
+        }
+
+        .form-section {
+            width: 100%;
+            background-color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .form-section img {
+            width: 100%;
+            display: block;
+            margin: 0 auto 30px;
+        }
+
+        .contact-form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #000;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3ba9bb;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-button {
+            background-color: #3ba9bb;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .submit-button:hover {
+            background-color: #2d8a99;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .submit-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .form-message {
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .form-message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .form-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                max-width: 100%;
+            }
+
+
+            .container::before,
+            .container::after {
+                width: 20px;
+            }
+
+            .container::before {
+                left: -20px;
+            }
+
+            .container::after {
+                right: -20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container::before,
+            .container::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <img src="Hero.png" alt="Spanish Glow Hero" class="hero-image">
+        </div>
+
+        <!-- Button Section -->
+        <div class="button-section">
+            <a href="#form">
+                <img src="hero button.png" alt="HBC Medical Group">
+            </a>
+        </div>
+
+        <!-- Etapes Section -->
+        <img src="etapes.png" alt="Les étapes du Spanish Glow" class="section-image">
+
+        <!-- Wavey decoration -->
+        <img src="wavey.png" alt="Decoration" class="section-image">
+
+        <!-- Form Section -->
+        <div id="form" class="form-section">
+            <img src="form.png" alt="Formulaire de contact">
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="nom">Nom Complet</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telephone">Téléphone</label>
+                    <input type="tel" id="telephone" name="telephone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="remarques">Remarques</label>
+                    <textarea id="remarques" name="remarques"></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">Envoyer</button>
+                <div class="form-message" id="formMessage"></div>
+            </form>
+
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbwnHdgzBrvW0wrbJQppUA1yTgw8WXsR8StC1C1tOdV8C-d8TcC2MUtpsiLSgpDQaOYLtQ/exec';
+                const form = document.getElementById('contactForm');
+                const submitButton = form.querySelector('.submit-button');
+                const formMessage = document.getElementById('formMessage');
+
+                form.addEventListener('submit', e => {
+                    e.preventDefault();
+
+                    submitButton.disabled = true;
+                    submitButton.textContent = 'Envoi en cours...';
+                    formMessage.style.display = 'none';
+
+                    fetch(scriptURL, {
+                        method: 'POST',
+                        body: new FormData(form)
+                    })
+                    .then(response => {
+                        formMessage.textContent = 'Merci! Votre message a été envoyé avec succès.';
+                        formMessage.className = 'form-message success';
+                        formMessage.style.display = 'block';
+                        form.reset();
+                    })
+                    .catch(error => {
+                        formMessage.textContent = 'Erreur lors de l\'envoi. Veuillez réessayer.';
+                        formMessage.className = 'form-message error';
+                        formMessage.style.display = 'block';
+                    })
+                    .finally(() => {
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Envoyer';
+                    });
+                });
+            </script>
+        </div>
+
+        <!-- FAQ Section -->
+        <img src="FAQ.png" alt="Questions fréquentes" class="section-image">
+    </div>
+</body>
+</html>
