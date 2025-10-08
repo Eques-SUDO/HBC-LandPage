@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spanish Glow - HBC Medical Group</title>
+    <link rel="icon" type="image/png" href="Asset 2.png">
     <style>
         * {
             margin: 0;
@@ -205,6 +206,72 @@
                 display: none;
             }
         }
+
+        /* Floating scroll button */
+        .floating-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #3ba9bb 0%, #2d8a99 100%);
+            color: white;
+            padding: 18px 30px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(59, 169, 187, 0.6);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            white-space: nowrap;
+            animation: pulse 2s infinite;
+            border: 3px solid white;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 6px 20px rgba(59, 169, 187, 0.6);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 8px 25px rgba(59, 169, 187, 0.8);
+            }
+        }
+
+        .floating-button:hover {
+            background: linear-gradient(135deg, #2d8a99 0%, #1f6b77 100%);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(59, 169, 187, 0.9);
+            animation: none;
+        }
+
+        @media (min-width: 769px) {
+            .floating-button {
+                right: calc(50% - 240px + 30px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .floating-button {
+                padding: 15px 25px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .floating-button {
+                padding: 12px 20px;
+                font-size: 14px;
+                right: 15px;
+                bottom: 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -287,8 +354,19 @@
             </script>
         </div>
 
+        <!-- Engagement Section -->
+        <img src="engagement.png" alt="Notre engagement" class="section-image">
+
         <!-- FAQ Section -->
-        <img src="FAQ.png" alt="Questions fréquentes" class="section-image">
+        <img src="faq update.png" alt="Questions fréquentes" class="section-image">
+
+        <!-- Footer Logo -->
+        <div style="text-align: center; padding: 20px 20px 40px 20px; background-color: white;">
+            <img src="Asset 3@4x.png" alt="HBC Medical Group" style="max-width: 300px; width: 100%; display: block; margin: 0 auto;">
+        </div>
     </div>
+
+    <!-- Floating button that scrolls to form -->
+    <a href="#form" class="floating-button" title="Contactez-nous">Réservez maintenant</a>
 </body>
 </html>
